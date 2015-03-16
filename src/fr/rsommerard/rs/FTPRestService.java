@@ -1,9 +1,7 @@
 package fr.rsommerard.rs;
 
-import com.sun.tools.internal.jxc.apt.Const;
 import fr.rsommerard.global.Constants;
 import fr.rsommerard.services.FTPService;
-import org.apache.commons.net.ftp.FTPFile;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -41,6 +39,20 @@ public class FTPRestService {
     public Response connect(@FormParam("login") String login, @FormParam("password") String password) {
         if(this.ftpService.connect(login, password)) {
             return Response.ok("Connection: OK").build();
+        }
+
+        return Response.status(Response.Status.FORBIDDEN).build();
+    }
+
+    /**
+     * Permet la deconnexion de l'utilisateur.
+     */
+    @Produces(MediaType.TEXT_HTML)
+    @Path("/disconnect")
+    @GET
+    public Response disconnect() {
+        if(this.ftpService.disconnect()) {
+            return Response.ok("Disconnected").build();
         }
 
         return Response.status(Response.Status.FORBIDDEN).build();

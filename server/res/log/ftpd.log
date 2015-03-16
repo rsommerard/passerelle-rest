@@ -5777,3 +5777,8 @@ java.net.ConnectException: Connection refused
 [ INFO] 2015-03-14 21:00:25,656 [admin] [127.0.0.1] SENT: 425 Can't open data connection.
 
 [ INFO] 2015-03-14 21:00:51,407 [admin] [127.0.0.1] CLOSED
+[ INFO] 2015-03-15 07:47:46,140 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2911a3a4: display name [org.springframework.context.support.FileSystemXmlApplicationContext@2911a3a4]; startup date [Sun Mar 15 07:47:46 CET 2015]; root of context hierarchy
+[ INFO] 2015-03-15 07:47:46,222 [] [] Loading XML bean definitions from file [/Users/Romain/GitHub/passerelle-rest/server/res/conf/ftpd-typical.xml]
+[ INFO] 2015-03-15 07:47:46,549 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@2911a3a4]: org.springframework.beans.factory.support.DefaultListableBeanFactory@30419d05
+[ INFO] 2015-03-15 07:47:46,571 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@30419d05: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2015-03-15 07:47:46,823 [] [] FTP server started
